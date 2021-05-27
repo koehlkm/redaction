@@ -5,7 +5,7 @@ import spacy
 
 st.title('Data Redaction App')
 st.subheader('Input Text and click enter to begin')
-nlp = spacy.load("en_core_web_md")
+nlp = spacy.load("en_core_web_sm")
 text = st.text_area('Input Text Here', height=400, max_chars=None, key=None, help=None)
 doc = nlp(text)
 visualize_ner(doc, labels=nlp.get_pipe("ner").labels)
